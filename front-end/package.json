@@ -1,0 +1,15 @@
+{
+  "name": "front-end",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server public --open --port=8080"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5"
+  }
+}

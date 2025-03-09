@@ -1,0 +1,534 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.contact-info {
+    font-size: 14px;
+}
+
+.logo-social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo {
+    height: 60px;
+}
+
+.social-icons img {
+    width: 20px;
+    margin: 0 5px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a,
+nav ul li button {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+nav ul li button:hover,
+nav ul li a:hover {
+    color: #ccc;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('home/home1.png'); /* Replace with actual image URL */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-family: 'Cursive', sans-serif;
+    font-size: 48px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-top: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.hero button {
+    background-color: #d33;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hero button:hover {
+    background-color: #b22;
+}
+/* Availability Section */
+.availability-section {
+    position: relative;
+    padding: 100px 20px;
+    background-color: #f7f7f7;
+    background-image: url('home/home2.png'); /* Replace with actual image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Overlay for opacity effect */
+.availability-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% opacity */
+    z-index: 1; /* Places overlay behind content */
+}
+
+/* Content inside availability-section */
+.availability-section * {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+/* Section heading */
+.availability-section h2 {
+    font-size: 36px;
+    color: #fff; /* Set to white for visibility */
+    margin-bottom: 20px;
+}
+
+/* Container with semi-transparent background */
+.availability-container {
+    background-color: rgba(255, 255, 255, 0.9); /* 90% opacity white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto; /* Centered horizontally */
+    position: relative;
+}
+
+/* Image inside the container */
+.availability-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Text content */
+.availability-content h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.availability-content p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Button with gradient */
+.availability-content button {
+    background: linear-gradient(135deg, #c33764, #1d2671);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.availability-content button:hover {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+}
+
+/* Contact Section */
+.contact-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+}
+
+.contact-image {
+    background-image: url('image2.png'); /* Path to your uploaded image */
+    background-size: cover;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    position: relative;
+    margin-right: 20px;
+}
+
+.contact-card {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+    text-align: center;
+}
+
+.contact-card h3 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.contact-card p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact-text {
+    max-width: 400px;
+    text-align: left;
+}
+
+.contact-text h2 {
+    font-size: 32px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-text p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-text button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.contact-text button:hover {
+    background-color: #555;
+}
+/* Connect to Nearby Restaurants Section */
+.connect-restaurants-section {
+    padding: 50px 20px;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+}
+/* Center the text vertically */
+.restaurants-container {
+    display: flex;
+    max-width: 1000px;
+    align-items: center; /* This will vertically center the items inside the container */
+    gap: 20px;
+}
+
+.text-column {
+    max-width: 50%; /* Adjust width as needed */
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* Ensure the content flows in a column */
+    justify-content: center; /* Vertically center the text */
+    height: 100%; /* Ensure the column takes up the full height of the container */
+}
+
+.restaurants-container {
+    display: flex;
+    max-width: 1000px;
+    align-items: flex-start; /* Align text and images column to the top */
+    gap: 20px;
+}
+.images-column {
+    display: grid;
+    grid-template-areas:
+        "img3 img4"
+        "img3 img5";
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 50%; /* Adjust width as needed */
+}
+
+.restaurant-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Ensures images fit their grid area */
+}
+
+/* Assign grid areas to each image */
+.restaurant-image:nth-child(1) {
+    grid-area: img3; /* Image 3 takes up two rows */
+}
+
+.restaurant-image:nth-child(2) {
+    grid-area: img4; /* Image 4 on top right */
+}
+
+.restaurant-image:nth-child(3) {
+    grid-area: img5; /* Image 5 on bottom right */
+}
+
+.text-column {
+    max-width: 50%; /* Adjust width as needed */
+    text-align: left;
+}
+
+.text-column h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-column p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.features p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.features p::before {
+    content: "•";
+    color: #d33;
+    font-weight: bold;
+}
+
+/* Image Modal Styles */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-image {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #3d3d3d;
+    color: #b5c3a4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-logo-img {
+    width: 50px;
+}
+
+.footer-title {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: #b5c3a4;
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+.footer-links {
+    text-align: left;
+    max-width: 200px;
+}
+
+.footer-links h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #b5c3a4;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-instagram {
+    text-align: left;
+    max-width: 250px;
+}
+
+.footer-instagram h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.instagram-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.instagram-images img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #888;
+}
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Feature Click Animation */
+.feature-clicked {
+    animation: featureHighlight 0.5s forwards;
+}
+
+@keyframes featureHighlight {
+    0% { background-color: #f0f8ff; }
+    100% { background-color: transparent; }
+}
+
+/* Modal Image Styles */
+.image-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.modal-image {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 5px;
+}
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+

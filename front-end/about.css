@@ -1,0 +1,355 @@
+style.css
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    color: #3a3a3a;
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.contact-info span {
+    margin-right: 15px;
+}
+
+.social-icons a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #444;
+    color: white;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+nav .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+nav .nav-links {
+    display: flex;
+    list-style: none;
+}
+
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+.book-food-btn {
+    padding: 10px 20px;
+    border: 2px solid #444;
+    background: white;
+    color: #444;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.image-container {
+    position: relative;
+    width: 50%;
+    padding-right: 30px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.contact-card {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.text-content {
+    width: 50%;
+}
+
+.text-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.text-content p {
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .image-container, .text-content {
+        width: 100%;
+    }
+
+    .text-content h2 {
+        font-size: 2rem;
+    }
+
+    .contact-card {
+        position: static;
+        margin-top: 20px;
+    }
+}
+/* Donations Section */
+.donations-section {
+    position: relative; /* Enable absolute positioning for overlay */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 20px; /* Added side padding for consistency */
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    background-image: url('about/aboutbg.png'); /* Replace with actual image path */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden; /* Hide any overflow from positioning */
+}
+
+/* Overlay for opacity effect */
+.donations-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* 50% opacity overlay */
+    z-index: 1; /* Places overlay behind content */
+}
+
+/* Content inside donations-section */
+.donations-section * {
+    position: relative;
+    z-index: 2; /* Ensures content is above the overlay */
+}
+
+.donation-content {
+    width: 60%;
+    padding-right: 20px;
+}
+
+.donation-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #fff; /* Ensures heading is visible on dark overlay */
+}
+
+.donation-content p {
+    font-size: 1rem;
+    color: #ddd; /* Light text color for readability */
+    margin-bottom: 20px;
+}
+
+.donation-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.donation-stats .stat-box {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background for contrast */
+}
+
+.donation-stats .stat-box h2 {
+    font-size: 2em;
+    margin: 0;
+    color: #fff;
+}
+
+.donation-stats .stat-box p {
+    font-size: 1em;
+    color: #ddd;
+    margin: 5px 0 0;
+}
+
+.donation-image {
+    width: 35%;
+}
+
+.donation-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsive for Donations Section */
+@media (max-width: 768px) {
+    .donations-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .donation-content,
+    .donation-image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .donation-content {
+        padding-right: 0;
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #3d3d3d;
+    color: #b5c3a4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    max-width: 300px;
+    text-align: left;
+}
+
+.footer-logo-img {
+    width: 50px;
+}
+
+.footer-title {
+    font-family: 'Georgia', serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: #b5c3a4;
+    font-size: 18px;
+    margin: 0 8px;
+}
+
+.footer-links {
+    text-align: left;
+    max-width: 200px;
+}
+
+.footer-links h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: #b5c3a4;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff;
+}
+
+.footer-instagram {
+    text-align: left;
+    max-width: 250px;
+}
+
+.footer-instagram h3 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.instagram-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+.instagram-images img {
+    width: 100%;
+    border-radius: 8px;
+    height: auto;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #888;
+}
